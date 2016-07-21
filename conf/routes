@@ -1,0 +1,25 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Default path will just redirect to the student list
+GET     /                           controllers.HomeController.index
+
+# Students list (look at the default values for pagination parameters)
+GET     /students                  controllers.HomeController.list(p:Int ?= 0, s:Int ?= 2, f ?= "")
+
+# Add student
+GET     /students/new              controllers.HomeController.create
+POST    /students                  controllers.HomeController.save
+
+# Edit existing student
+GET     /students/:id              controllers.HomeController.edit(id:Long)
+POST    /students/:id              controllers.HomeController.update(id:Long)
+
+# Delete a student
+POST    /students/:id/delete       controllers.HomeController.delete(id:Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+GET     /generate                  controllers.HomeController.generatePage

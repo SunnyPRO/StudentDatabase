@@ -1,0 +1,123 @@
+@(implicit title: String)
+
+<html>
+<head>
+  <title>@title</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("/stylesheets/bootstrap.min.css")">
+    <link href="@routes.Assets.at("/css/metisMenu.min.css")" rel="stylesheet" type="text/css">
+    <link href="@routes.Assets.at("/css/sb-admin-2.css")" rel="stylesheet" type="text/css">
+    <link href="@routes.Assets.at("/css/font-awesome.min.css")" rel="stylesheet" type="text/css">
+    <script src="@routes.Assets.at("/js/libs/jquery-2.1.4.js")"></script>
+
+    <script type="text/javascript" src="@routes.Assets.at("/js/libs/bootstrap.min.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("/js/libs/metisMenu.min.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("/js/libs/sb-admin-2.js")"></script>
+</head>
+<body style="margin: 0; border: 0;">
+
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="@routes.HomeController.index()">Sistem de automatizare a licenzierii studentilor UTM</a>
+    </div>
+
+  <div style="float: left; width: 100%;height: 100%">
+    <div style="margin-right: 280px;">
+      <div style="margin-top: 0; background: #000000;height: 100%">
+          <iframe src="http://docs.google.com/gview?url=http://95.65.90.145:7777/Ordine%20teme%202015%20zi.doc&embedded=true" style="width:100%; height:100%;" frameborder="0">
+          </iframe>
+      </div>
+    </div>
+  </div>
+
+  <div style="float: left; width: 280px; margin-left: -280px; ">
+    <div style="margin-top: 0; background: #d3d3d3;height: 100%">
+        <div class="navbar-default sidebar" style="width: 280px;margin-top: 0px" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+
+                    <!-- edit -->
+                    <li class="sidebar-search">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Data.. ">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" style="padding: 9px">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </li>
+                    <!-- edit -->
+
+                        <!-- edit -->
+                    <li class="sidebar-search">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Nr.. ">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" style="padding: 9px">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </li>
+                        <!-- edit -->
+
+
+
+                    <li>
+                        <a href="#"><i class="fa fa-asterisk"></i> Selecteaza Decanul FCIM<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><input type="radio" name="decan"/> Ion Balmuş</a>
+                            </li>
+                        </ul>
+                            <!-- /.nav-second-level -->
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-asterisk"></i> Şef catedră TI<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><input type="radio" name="sefcatedra"/>  Victor Beşliu</a>
+                            </li>
+                            <li>
+
+                                <a href="#"><input type="radio" name="sefcatedra"/>  Ciorbă Dumitru</a>
+                            </li>
+                        </ul>
+                            <!-- /.nav-second-level -->
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-asterisk"></i> Secretar responsabil<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><input type="radio" name="secretar"/> Nina Sava</a>
+                            </li>
+                        </ul>
+                            <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-gear"></i> Generare</a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-save"></i> Salvare</a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-print"></i> La tipar</a>
+                    </li>
+                </ul>
+            </div>
+                <!-- /.sidebar-collapse -->
+        </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

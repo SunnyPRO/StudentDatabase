@@ -1,0 +1,31 @@
+@(studentForm: Form[Student], companies: Seq[(String, String)])(implicit messages: Messages)
+
+@import b3.vertical.fieldConstructor
+
+@main {
+    
+    <h1>Add a student</h1>
+    
+    @b3.form(routes.HomeController.save()) {
+        
+        <fieldset>
+            @b3.text(studentForm("name"), '_label -> "Student name", '_help -> "")
+            @b3.date(studentForm("introduced"), '_label -> "Introduced date", '_help -> "")
+            @b3.date(studentForm("discontinued"), '_label -> "Discontinued date", '_help -> "")
+
+            @b3.select(
+                studentForm("groupsql"),
+                companies, 
+                '_label -> "Groupsql", '_default -> "-- Choose a group --",
+                '_showConstraints -> false
+            )
+        </fieldset>
+        
+        <div class="actions">
+            <input type="submit" value="Create this student" class="btn primary"> or
+            <a href="@routes.HomeController.list()" class="btn">Cancel</a>
+        </div>
+        
+    }
+    
+}
